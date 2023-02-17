@@ -1,4 +1,4 @@
-curl -X POST 'https://api.cloudflare.com/client/v4/accounts/df681cd207a9e2afa394d260c486fd1e/logpush/jobs' \
+curl -X POST 'https://api.cloudflare.com/client/v4/accounts/$ACCOUNTID/logpush/jobs' \
 -H 'X-Auth-Key: $APIKEY' \
 -H 'X-Auth-Email: $EMAIL' \
 -H 'Content-Type: application/json' \
