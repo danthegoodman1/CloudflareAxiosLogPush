@@ -10,7 +10,7 @@ export default {
 		ctx: ExecutionContext
 	): Promise<Response> {
 		if (request.headers.get("content-length") === "4") {
-			console.log("got test")
+			console.log("got test", env.DATASET, env.TOKEN)
 			return new Response("f u test")
 		}
 		if (request.headers.get("content-encoding") === "gzip") {
@@ -27,7 +27,7 @@ export default {
 			return fetch(`https://cloud.axiom.co/api/v1/datasets/${env.DATASET}/ingest`, {
 				method: "POST",
 				headers: {
-					"Authorization": `Bearer: ${env.TOKEN}`,
+					"Authorization": `Bearer ${env.TOKEN}`,
 					"content-encoding": "gzip",
 					"content-type": "application/json"
 				},
