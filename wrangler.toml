@@ -1,3 +1,6 @@
 name = "cloudflareaxioslogpush"
 main = "src/index.ts"
 compatibility_date = "2023-02-17"
+
+[vars]
+DATASET = "cloudflareworkers"
